@@ -14,11 +14,15 @@ var icons = document.querySelectorAll(".collapse_clicker");
 
 // Iterate through each title
 titles.forEach((title, index) => {
-  // Add click event listener to each title
   title.addEventListener("click", () => {
-    // Get the corresponding icon for the clicked title
     var icon = icons[index];
     // Toggle rotation
     icon.style.transform = icon.style.transform === "rotate(90deg)" ? "rotate(0deg)" : "rotate(90deg)";
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.querySelector('.preloader').style.display = 'none';
+  }, 2000); 
 });
